@@ -1,0 +1,192 @@
+html {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin-block: 3rem;
+    margin-inline: 7vw;
+    background-color: #F5F5F5;
+}
+
+/*------------------------------FONTS------------------------------*/
+@font-face {
+    font-family: DMSans;
+    src: url(../assets/fonts/static/DMSans-Regular.ttf);
+}
+
+.font-dmsans,
+h1,
+h2,
+span {
+    font-family: "DMSans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: auto;
+    line-height: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+
+span {
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+
+/*------------------------------OTHER-GLOBAL-TAGS------------------------------*/
+main {
+    display: flex;
+}
+
+/*------------------------------FLEXBOX------------------------------*/
+.flex-column,
+.widget,
+.widget-section-1,
+.widget-five-stars,
+.widget-height-clip-path,
+.widget-consistent-schedule,
+.widget-audience-growth {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+/*------------------------------SECTION------------------------------*/
+section {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.vertical-section-1 {
+    flex-direction: column;
+    width: fit-content;
+}
+
+/*------------------------------WIDGET------------------------------*/
+.widget,
+.widget-section-1,
+.widget-five-stars,
+.widget-height-clip-path,
+.widget-consistent-schedule,
+.widget-audience-growth,
+.widget-grow-followers {
+    height: fit-content;
+    width: fit-content;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.widget-section-1 {
+    height: 100%;
+}
+
+.widget-five-stars {
+    text-align: center;
+    align-items: center;
+    width: -moz-available;
+    /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;
+    /* Mozilla-based browsers will ignore this. */
+    padding: 6rem;
+    gap: 1rem;
+    background-color: #5c32cf;
+}
+
+.widget-height-clip-path {
+    height: -moz-available;
+    /* WebKit-based browsers will ignore this. */
+    height: -webkit-fill-available;
+    /* Mozilla-based browsers will ignore this. */
+    clip-path: padding-box;
+    gap: 1rem;
+}
+
+.widget-consistent-schedule {
+    padding: 0;
+    margin: 0;
+    padding-inline: 2rem;
+    padding-top: 2rem;
+    margin-inline: 1rem;
+    margin-top: 1rem;
+}
+
+.widget-audience-growth {
+    background-color: #FFFFFF;
+    gap: 1rem;
+}
+
+.widget-grow-followers {
+    align-items: center;
+}
+
+/*------------------------------IMG------------------------------*/
+#illustration-create-post {
+    width: 70%;
+    align-self: center;
+    margin-bottom: 3rem;
+}
+
+#illustration-ai-content {
+    width: 100%;
+}
+
+#illustration-five-stars {
+    width: 50%;
+}
+
+#illustration-schedule-posts {
+    width: 50%;
+}
+
+#illustration-multiple-platforms {
+    width: 140%;
+    border-radius: 5rem;
+}
+
+#illustration-consistent-schedule {
+    width: 70%;
+    align-self: center;
+}
+
+#illustration-schedule-posts {
+    width: 200%;
+}
+
+#illustration-audience-growth {
+    width: 70%;
+}
+
+#illustration-grow-followers {
+    width: 35%;
+}
+
+/*----------MEDIA----------*/
+@media (max-width: 1300px) {
+    .flex-row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
