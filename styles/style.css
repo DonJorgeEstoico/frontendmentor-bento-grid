@@ -6,6 +6,10 @@ html {
 body {
     display: grid;
     min-height: 100vh;
+    width: -moz-available;
+    /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;
+    /* Mozilla-based browsers will ignore this. */
     justify-content: center;
     align-items: center;
     margin-block: 3rem;
@@ -45,11 +49,6 @@ span {
     font-size: 1.2rem;
 }
 
-/*------------------------------OTHER-GLOBAL-TAGS------------------------------*/
-main {
-    display: flex;
-}
-
 /*------------------------------FLEXBOX------------------------------*/
 .flex-column,
 .widget,
@@ -62,15 +61,20 @@ main {
     flex-direction: column;
 }
 
-.flex-row {
+.flex-row,
+.widget-grow-followers {
     display: flex;
     flex-direction: row;
 }
 
-/*------------------------------SECTION------------------------------*/
+/*------------------------------AREAS------------------------------*/
+main {
+    display: flex;
+}
+
 section {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
 }
 
@@ -79,7 +83,6 @@ section {
     width: fit-content;
 }
 
-/*------------------------------WIDGET------------------------------*/
 .widget,
 .widget-section-1,
 .widget-five-stars,
@@ -87,7 +90,7 @@ section {
 .widget-consistent-schedule,
 .widget-audience-growth,
 .widget-grow-followers {
-    height: fit-content;
+    height: auto;
     width: fit-content;
     padding: 2rem;
     margin: 1rem;
@@ -111,21 +114,21 @@ section {
 }
 
 .widget-height-clip-path {
+    clip-path: padding-box;
+    gap: 1rem;
+    background-color: #FFFFFF;
+}
+
+.widget-consistent-schedule {
+    background-color: #FEC961;
+}
+
+#schedule-social-media-area {
     height: -moz-available;
     /* WebKit-based browsers will ignore this. */
     height: -webkit-fill-available;
     /* Mozilla-based browsers will ignore this. */
-    clip-path: padding-box;
-    gap: 1rem;
-}
-
-.widget-consistent-schedule {
-    padding: 0;
-    margin: 0;
-    padding-inline: 2rem;
-    padding-top: 2rem;
-    margin-inline: 1rem;
-    margin-top: 1rem;
+    background-color: #D6CEF2;
 }
 
 .widget-audience-growth {
@@ -135,6 +138,7 @@ section {
 
 .widget-grow-followers {
     align-items: center;
+    background-color: #714ECE;
 }
 
 /*------------------------------IMG------------------------------*/
@@ -182,6 +186,10 @@ section {
 @media (max-width: 1300px) {
     .flex-row {
         flex-direction: column;
+    }
+    
+    .widget-audience-growth {
+        width: auto;
     }
 }
 
